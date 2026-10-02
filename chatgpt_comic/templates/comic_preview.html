@@ -1,0 +1,3 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Comic Preview</title><link rel="stylesheet" href="/static/css/style.css"></head>
+<body><main class="container"><h1>📖 Your Comic</h1>{% for p in layout %}<section class="panel"><h2>Panel {{p.panel_number}}: {{p.title}}</h2><img src="{{p.image_path}}" alt="Panel {{p.panel_number}}"><p class="scene">{{p.scene_description}}</p><p><strong>{{p.caption}}</strong></p><p>{{p.narration}}</p></section>{% endfor %}
+<div class="actions"><a class="button" href="{{pdf_path}}" download>⬇️ Download Your Comic as PDF</a> <a class="button secondary" href="/">Create Another</a></div></main></body></html>
